@@ -11,4 +11,8 @@ class TowerOfHanoi
     HEREDOC
   end
 
+  def quit?(user_input)
+    user_input.strip.downcase == "q"
+  end
+
 end
