@@ -1,4 +1,20 @@
 class TowerOfHanoi
+  ###########################################################################
+  #
+  # Description of the data structures used to model the Tower of Hanoi game:
+  # -------------------------------------------------------------------------
+  # Disks are simply modeled as positive integers. Each of the three rods
+  # contains a (possibly empty) stack of disks. Each stack is modeled as
+  # an array containing such disks. The disks in a stack are only allowed
+  # to be in a sorted (ascending) order at any point during the game. The
+  # game "platform" is modeled as an array containing three stacks of disks.
+  #
+  # A game state corresponds to a particular configuration of the aforesaid
+  # data structures.
+  # Example of a game state: [[1, 2, 3], [], []]
+  #
+  ###########################################################################
+
   def welcome
     "# Welcome to Tower of Hanoi!"
   end
