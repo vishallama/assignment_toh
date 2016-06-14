@@ -36,6 +36,12 @@ class TowerOfHanoi
     user_input.strip.downcase == "q"
   end
 
+  def valid_move?(from, to)
+    valid_range = [0, 1, 2]
+
+    from != to && valid_range.include?(from) && valid_range.include?(to)
+  end
+
   def render
     empty_strings = Array.new(@disks) { "" }
 
