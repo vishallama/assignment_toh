@@ -15,6 +15,11 @@ class TowerOfHanoi
   #
   ###########################################################################
 
+  def initialize(disks = 1)
+    @disks = disks
+    @stacks = [(1..disks).to_a, [], []]
+  end
+
   def welcome
     "# Welcome to Tower of Hanoi!"
   end
