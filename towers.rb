@@ -6,18 +6,18 @@ class TowerOfHanoi
   # Disks are simply modeled as positive integers. Each of the three rods
   # contains a (possibly empty) stack of disks. Each stack is modeled as
   # an array containing such disks. The disks in a stack are only allowed
-  # to be in a sorted (ascending) order at any point during the game. The
+  # to be in a sorted (descending) order at any point during the game. The
   # game "platform" is modeled as an array containing three stacks of disks.
   #
   # A game state corresponds to a particular configuration of the aforesaid
   # data structures.
-  # Example of a game state: [[1, 2, 3], [], []]
+  # Example of a game state: [[3, 2, 1], [], []]
   #
   ###########################################################################
 
   def initialize(disks = 1)
     @disks = disks
-    @stacks = [(1..disks).to_a, [], []]
+    @stacks = [(1..disks).to_a.reverse, [], []]
   end
 
   def welcome
