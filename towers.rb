@@ -36,4 +36,21 @@ class TowerOfHanoi
     user_input.strip.downcase == "q"
   end
 
+  def render
+    empty_strings = Array.new(@disks) { "" }
+
+    stacks_text = @stacks.map do |stack|
+      empty_strings.zip(stack).map(&:join).map { |s| s.rjust(5) }
+    end
+
+    display_string =
+      stacks_text[0]
+      .zip(stacks_text[1], stacks_text[2])
+      .map(&:join)
+      .reverse
+      .join("\n")
+
+    display_string
+  end
+
 end
