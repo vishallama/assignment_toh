@@ -53,4 +53,10 @@ class TowerOfHanoi
     display_string
   end
 
+  def game_won?
+    winning_stack = (1..@disks).to_a.reverse
+
+    @stacks[1] == winning_stack || @stacks[2] == winning_stack
+  end
+
 end
